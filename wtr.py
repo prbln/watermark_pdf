@@ -3,9 +3,8 @@ import sys
 inputs = sys.argv[1:]
 #opening and accessing the wtr-mark pg
 reader1 = PyPDF2.PdfFileReader( open('watermark.pdf','rb') )
-
-#accessing each input pdf one by one
 output = PyPDF2.PdfFileWriter()
+#accessing each input pdf one by one
 for pdf in inputs:
 	reader = PyPDF2.PdfFileReader(open(pdf,'rb') )
 	for page_no in range(reader.numPages):
